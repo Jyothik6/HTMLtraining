@@ -1,0 +1,42 @@
+class Account{
+int accNo;
+String name;
+double balance;
+public void deposit (double amt){
+balance +=amt;
+}
+public void withdraw(double amt){
+balnce-=amt;
+}
+public void printBalance(){
+System.out.println("balance is "+balance);
+}
+}
+class SavingsAccount extends Account{
+
+public void deposit(double amt){
+if(amt>50000){
+System.out.println();
+}
+else
+{
+super.deposit(amt);
+}
+}
+}
+public class Inherit{
+
+public static void main(String args[]){
+SavingsAccount myAcc=new SavingsAccount();
+myAcc.deposit(5000);
+myAcc.printBalance();
+}
+}
+
+
+
+
+
+
+
+
