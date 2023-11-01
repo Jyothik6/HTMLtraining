@@ -1,162 +1,18 @@
-import java.util.Scanner;
-
- class Employee {
-
-    private String name;
-
-    private int age;
-
-    private double salary;
-
- public Demo(String name, int age, double salary) {
-
-        this.name = name;
-
-        this.age = age;
-
-        this.salary = salary;
-
-    }
-
- 
-public void calculateSalary(double basic, double hra, double da, double specialAllowance) {
-
-        this.salary = basic + hra + da + specialAllowance;
-
-    }
-
- public void calculateSalary(double basic, double hra, double da) {
-
-        this.salary = basic + hra + da;
-
-    }
-
- public String getName() {
-
-        return name;
-
-    }
- public int getAge() {
-
-        return age;
-
-    }
-public double getSalary() {
-
-        return salary;
-
-    }
-
-}
-
- 
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        Employee[] arr = new Employee[5];
-
- 
-
-        for (int i = 0; i < arr.length; i++) {
-
-            System.out.print(" name: ");
-
-            String name = sc.nextLine();
-
- 
-
-            System.out.print(" age: ");
-
-            int age = sc.nextInt();
-
- 
-
-            System.out.print(" basic salary: ");
-
-            double basic = sc.nextDouble();
-
- 
-
-            System.out.print(" HRA: ");
-
-            double hra = sc.nextDouble();
-
- 
-
-            System.out.print(" DA: ");
-
-            double da = sc.nextDouble();
-
- 
-
-            
-
-            int hasSpecialAllowance = sc.nextInt();
-
-            double specialAllowance = 0;
-
- 
-
-            if (hasSpecialAllowance == 1) {
-
-                System.out.print("Enter special allowance: ");
-
-                specialAllowance = sc.nextDouble();
-
-            }
-
- 
-
-            sc.nextLine();  
-
- 
-
-            
-
-            if (hasSpecialAllowance == 1) {
-
-                arr[i] = new Employee(name, age, basic);
-
-                arr[i].calculateSalary(basic, hra, da, specialAllowance);
-
-            } else {
-
-                arr[i] = new Employee(name, age, basic);
-
-                arr[i].calculateSalary(basic, hra, da);
-
-            }
-
-        }
-
- 
-
-        
-
-        System.out.println("Employee Details:");
-
-        for (Employee employee :arr) {
-
-            System.out.println("Name: " + employee.getName());
-
-            System.out.println("Age: " + employee.getAge());
-
-            System.out.println("Salary: " + employee.getSalary());
-
-            
-
-        }
-
- 
-
-        sc.close();
-
-    }
-
-}
-
- 
+public class Main{  
+public static void main(String args[]){  
+  
+int arr1[][]={{1,3,4},{2,4,3}};    
+int arr2[][]={{1,3,4},{2,4,3}};    
+    
+
+int arr3[][]=new int[3][3];  
+    
+
+for(int i=0;i<3;i++){    
+for(int j=0;j<3;j++){    
+arr3[i][j]=arr1[i][j]+arr2[i][j];     
+System.out.print(arr3[i][j]+" ");    
+}    
+System.out.println();
+}    
+}}  
